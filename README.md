@@ -2,6 +2,9 @@
 
 Публичный канал дистрибуции финальных сборок **Claude Guard** для macOS.
 
+<img width="2024" height="1804" alt="image" src="https://github.com/user-attachments/assets/bf947fb8-9ff0-49ee-bfcc-11e9e76e39c2" />
+
+
 ## Что это
 
 Claude Guard — защита маршрута для работы с Claude/Anthropic на macOS:
