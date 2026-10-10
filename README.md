@@ -1,34 +1,20 @@
 # Claude Guard — Releases
 
-Публичный канал дистрибуции финальных сборок **Claude Guard** для macOS.
+**English** | [Русский](#русский)
 
-<img width="2024" height="1804" alt="image" src="https://github.com/user-attachments/assets/bf947fb8-9ff0-49ee-bfcc-11e9e76e39c2" />
+Route-enforcement and kill-switch utility for Claude/Anthropic on macOS.
 
+- **Kill switch**: if the VPN goes down, direct access to Anthropic services is blocked at the kernel level (PF) — regardless of VPN client state, GUI, or reboots
+- **Real-time monitoring**: active connections, route nodes, egress IP stability, change events
+- **Per-app policy**: Claude Desktop / Claude Code go through your chosen proxy (fail-closed); authenticated proxies via a local bridge (credentials in Keychain)
+- **Strict mode** (opt-in): all traffic forced through the tunnel
+- **Traffic accounting**: bytes/speed per session/day/month per proxy
+- UI: window + menu bar, RU/EN
 
-## Что это
+Install: download `ClaudeGuard-*.pkg` from [Releases](../../releases), open, enter admin password. guardd starts automatically; protection applies within ~30 s. Builds are Developer ID signed and notarized. macOS 13+, requires a Mihomo-core VPN client (e.g. Koala Clash).
 
-Claude Guard — защита маршрута для работы с Claude/Anthropic на macOS:
+This tool prevents unintended direct network connections. It does not hide your location or bypass third-party service checks.
 
-- **Kill switch**: при недоступности VPN прямой доступ к сервисам Anthropic блокируется на уровне ядра (PF) — независимо от состояния VPN-клиента, GUI или перезагрузки
-- **Мониторинг в реальном времени**: активные соединения, узлы маршрута, стабильность egress IP, события смен
-- **Требование к приложениям**: Claude Desktop / Claude Code идут через заданный прокси (fail-closed), свой прокси с авторизацией — через локальный мост (креды в Keychain)
-- **Строгий режим** (opt-in): весь трафик — только через туннель
-- **Учёт трафика**: байты/скорость за сессию, день, месяц по каждому прокси
-- Интерфейс: окно + строка меню, RU/EN
+## Русский
 
-## Установка
-
-1. Скачай последний `ClaudeGuard-*.pkg` из [Releases](../../releases)
-2. Открой — установщик спросит пароль администратора
-3. guardd запустится автоматически, защита применяется в течение ~30 секунд
-
-Сборки подписаны (Developer ID) и нотарифицированы Apple — Gatekeeper пропускает без предупреждений.
-
-## Требования
-
-- macOS 13+ (проверено на macOS 27, Apple Silicon)
-- VPN-клиент с ядром Mihomo (например, Koala Clash)
-
-## Важно
-
-Инструмент предотвращает непреднамеренные прямые сетевые подключения. Он не скрывает местоположение, не обходит проверки сторонних сервисов и не заменяет ознакомление с условиями использования. Исходный код и внутренняя документация — в приватном репозитории разработки.
+Защита маршрута и kill switch для Claude/Anthropic на macOS: блокировка прямого доступа на уровне ядра при отказе VPN, мониторинг в реальном времени, прокси-профили с Keychain, учёт трафика, строгий режим. Установка — pkg из Releases; сборки подписаны и нотарифицированы. macOS 13+, требуется VPN-клиент на ядре Mihomo. Инструмент не скрывает местоположение и не обходит проверки сервисов.
