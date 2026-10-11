@@ -18,3 +18,15 @@ This tool prevents unintended direct network connections. It does not hide your 
 ## Русский
 
 Защита маршрута и kill switch для Claude/Anthropic на macOS: блокировка прямого доступа на уровне ядра при отказе VPN, мониторинг в реальном времени, прокси-профили с Keychain, учёт трафика, строгий режим. Установка — pkg из Releases; сборки подписаны и нотарифицированы. macOS 13+, требуется VPN-клиент на ядре Mihomo. Инструмент не скрывает местоположение и не обходит проверки сервисов.
+
+---
+
+## Credits & Copyright
+
+© 2026 **DigneZzZ** — conceived and developed by DigneZzZ.
+
+Собрано проектами **GIG.ovh** и **Openode.XYZ**.
+
+🚀 *Ждите открытия нового облачного сервиса — **ux.cloud***
+
+Копирование материалов релизов допускается с указанием авторства.
